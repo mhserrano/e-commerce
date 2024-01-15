@@ -1,5 +1,5 @@
 function Categories() {
-  return null;
+  return <p>Hello from Categories</p>;
 }
 
 export default Categories;
