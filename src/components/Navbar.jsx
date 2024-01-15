@@ -16,8 +16,8 @@ function Navbar() {
           <div className="nav-links">
             <Link to="/pages/Categories">categories</Link>
             <Link to="/pages/FavoritePage">favorite</Link>
+            <IconShoppingCart />
           </div>
-          <IconShoppingCart />
         </div>
       </nav>
     </>
