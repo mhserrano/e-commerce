@@ -1,24 +1,23 @@
+import "./Navbar.css";
+
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 import Logo from "../img/logo.svg";
+import { IconShoppingCart } from "@tabler/icons-react";
 
 function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="container">
+        <div className="nav-container">
           <Link to="/">
-            <img src={Logo} alt="Store Logo" />
+            <img src={Logo} alt="Store Logo" className="logo-img" />
           </Link>
           <div className="nav-links">
             <Link to="/pages/Categories">categories</Link>
             <Link to="/pages/FavoritePage">favorite</Link>
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "#000000" }}
-            />
           </div>
+          <IconShoppingCart />
         </div>
       </nav>
     </>
