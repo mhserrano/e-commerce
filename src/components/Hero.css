@@ -1,0 +1,30 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one two three" "one two-low three-low";
+  grid-gap: 15px;
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.two-low {
+  grid-area: two-low;
+}
+.three {
+  grid-area: three;
+}
+.three-low {
+  grid-area: three-low;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
