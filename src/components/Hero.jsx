@@ -9,16 +9,33 @@ import Sofas from "../img/header/sofas-header.jpg";
 function Hero() {
   return (
     <div className="container">
-      <img src={Sofas} alt="Sofas" className="one" height={700} />
-      <p className="main-description">sofas</p>
-      <img src={Beds} alt="Beds" className="two" height={350} />
-      <p className="main-description">beds</p>
-      <img src={Chairs} alt="Chairs" className="two-low" height={350} />
-      <p className="main-description">chairs</p>
-      <img src={Plants} alt="Plants" className="three" height={350} />
-      <p className="main-description">plants</p>
-      <img src={Lighting} alt="Lighting" className="three-low" height={350} />
-      <p className="main-description">lighting</p>
+      <div className="header-container">
+        <div className="grid-one">
+          <div className="shadow"></div>
+          <img src={Sofas} alt="Sofas" />
+          <p className="main-description">sofas</p>
+        </div>
+        <div className="grid-two">
+          <div className="shadow"></div>
+          <img src={Beds} alt="Beds" />
+          <p className="main-description">beds</p>
+        </div>
+        <div className="grid-two-low">
+          <div className="shadow"></div>
+          <img src={Plants} alt="Plants" />
+          <p className="main-description">plants</p>
+        </div>
+        <div className="grid-three">
+          <div className="shadow"></div>
+          <img src={Lighting} alt="Lighting" />
+          <p className="main-description">lighting</p>
+        </div>
+        <div className="grid-three-low">
+          <div className="shadow"></div>
+          <img src={Chairs} alt="Chairs" />
+          <p className="main-description">chairs</p>
+        </div>
+      </div>
     </div>
   );
 }
