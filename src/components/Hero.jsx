@@ -1,4 +1,4 @@
-import "./Hero.css";
+import "./Header.css";
 
 import { Link } from "react-router-dom";
 import Beds from "../img/header/beds-header.jpg";
@@ -8,8 +8,8 @@ import Plants from "../img/header/plants-header.jpg";
 import Sofas from "../img/header/sofas-header.jpg";
 function Hero() {
   return (
-    <div className="container">
-      <div className="header-container">
+    <div className="home-container">
+      <div className="grid-container">
         <div className="grid-one">
           <div className="shadow"></div>
           <img src={Sofas} alt="Sofas" />
