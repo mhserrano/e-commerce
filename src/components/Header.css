@@ -1,7 +1,4 @@
-.home-container {
-  padding-top: 130px;
-}
-.grid-container {
+.hero-grid-container {
   height: 500px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -31,7 +28,7 @@
   overflow: hidden;
 }
 
-.grid-container img {
+.hero-grid-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -8,8 +8,8 @@ import Plants from "../img/header/plants-header.jpg";
 import Sofas from "../img/header/sofas-header.jpg";
 function Hero() {
   return (
-    <div className="home-container">
-      <div className="grid-container">
+    <div className="container">
+      <div className="hero-grid-container">
         <div className="grid-one">
           <div className="shadow"></div>
           <img src={Sofas} alt="Sofas" />

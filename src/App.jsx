@@ -7,14 +7,14 @@ import FavoritePage from "./pages/FavoritePage";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pages/Categories" element={<Categories />} />
         <Route path="/pages/FavoritePage" element={<FavoritePage />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
