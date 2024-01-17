@@ -1,0 +1,34 @@
+.title {
+  display: flex;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.title h3 {
+  margin: 0 auto;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.title a {
+  display: flex;
+  align-items: center;
+}
+
+.categories-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.categories-btns button {
+  padding: 6px 16px;
+  border: 2px solid rgb(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+  transition: all 200ms ease-in-out;
+}
+
+.categories-btns button:hover {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+}

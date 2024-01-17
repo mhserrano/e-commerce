@@ -1,5 +1,10 @@
+import CategoriesHeader from "../components/CategoriesHeader.jsx";
 function Categories() {
-  return <p>Hello from Categories</p>;
+  return (
+    <>
+      <CategoriesHeader />
+    </>
+  );
 }
 
 export default Categories;
