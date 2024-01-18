@@ -14,8 +14,8 @@ function Navbar() {
             <img src={Logo} alt="Store Logo" className="logo-img" />
           </Link>
           <div className="nav-links">
-            <Link to="/pages/Categories">categories</Link>
-            <Link to="/pages/FavoritePage">favorite</Link>
+            <Link to="categories">categories</Link>
+            <Link to="favorite-page">favorite</Link>
             <IconShoppingCart />
           </div>
         </div>
