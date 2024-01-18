@@ -21,10 +21,18 @@ function CategoriesHeader() {
           <Link to="sofas">
             <button>Sofas</button>
           </Link>
-          <button>Beds</button>
-          <button>Lighting</button>
-          <button>Plants</button>
-          <button>Chairs</button>
+          <Link to="beds">
+            <button>Beds</button>
+          </Link>
+          <Link to="lighting">
+            <button>Lighting</button>
+          </Link>
+          <Link to="plants">
+            <button>Plants</button>
+          </Link>
+          <Link to="chairs">
+            <button>Chairs</button>
+          </Link>
         </div>
       </div>
     </div>
