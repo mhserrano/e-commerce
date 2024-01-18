@@ -11,29 +11,38 @@ function Hero() {
     <div className="container">
       <div className="hero-grid-container">
         <div className="grid-one">
-          <div className="shadow"></div>
-          <img src={Sofas} alt="Sofas" />
-          <p className="main-description">sofas</p>
+          <Link to="categories/sofas">
+            <img src={Sofas} alt="Sofas" />
+            <p className="main-description">sofas</p>
+          </Link>
         </div>
+
         <div className="grid-two">
-          <div className="shadow"></div>
-          <img src={Beds} alt="Beds" />
-          <p className="main-description">beds</p>
+          <Link to="categories/beds">
+            <img src={Beds} alt="Beds" />
+            <p className="main-description">beds</p>
+          </Link>
         </div>
+
         <div className="grid-two-low">
-          <div className="shadow"></div>
-          <img src={Plants} alt="Plants" />
-          <p className="main-description">plants</p>
+          <Link to="categories/plants">
+            <img src={Plants} alt="Plants" />
+            <p className="main-description">plants</p>
+          </Link>
         </div>
+
         <div className="grid-three">
-          <div className="shadow"></div>
-          <img src={Lighting} alt="Lighting" />
-          <p className="main-description">lighting</p>
+          <Link to="categories/lighting">
+            <img src={Lighting} alt="Lighting" />
+            <p className="main-description">lighting</p>
+          </Link>
         </div>
+
         <div className="grid-three-low">
-          <div className="shadow"></div>
-          <img src={Chairs} alt="Chairs" />
-          <p className="main-description">chairs</p>
+          <Link to="categories/chairs">
+            <img src={Chairs} alt="Chairs" />
+            <p className="main-description">chairs</p>
+          </Link>
         </div>
       </div>
     </div>
