@@ -1,10 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import All from "./components/SingleCategory/All";
 import Sofas from "./components/SingleCategory/Sofas";
-import Navbar from "./components/Navbar";
+import Beds from "./components/SingleCategory/Beds";
+import Lighting from "./components/SingleCategory/Lighting";
+import Plants from "./components/SingleCategory/Plants";
+import Chairs from "./components/SingleCategory/Chairs";
 import FavoritePage from "./pages/FavoritePage";
 
 function App() {
@@ -16,6 +20,10 @@ function App() {
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="sofas" element={<Sofas />} />
+          <Route path="beds" element={<Beds />} />
+          <Route path="lighting" element={<Lighting />} />
+          <Route path="plants" element={<Plants />} />
+          <Route path="chairs" element={<Chairs />} />
         </Route>
         <Route path="favorite-page" element={<FavoritePage />} />
       </Routes>
