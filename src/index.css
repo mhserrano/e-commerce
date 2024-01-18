@@ -1,6 +1,10 @@
 body {
   font-family: "Blinker", sans-serif;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
 
 /* global */
 
