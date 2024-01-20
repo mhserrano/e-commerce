@@ -8,11 +8,19 @@ function CategoriesItem() {
     }
   };
 
-  const shuffledItems = shuffleItems(items);
+  shuffleItems(items);
 
   return (
     <div className="products-container">
-      <div className="products-grid">{shuffledItems.map((item) => {})}</div>
+      <div className="products-grid">
+        {items.map((item) => {
+          return (
+            <div className="product" key={item.id}>
+              <img src={item.img} alt="product" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
