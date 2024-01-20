@@ -1,5 +1,7 @@
+import CategoriesItem from "./CategoriesItem";
+
 function All() {
-  return <div className="container">Hello from All</div>;
+  return <CategoriesItem />;
 }
 
 export default All;
