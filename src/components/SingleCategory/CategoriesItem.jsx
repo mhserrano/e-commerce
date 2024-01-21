@@ -1,3 +1,4 @@
+import "../Categories.css";
 import { items } from "../AllData";
 
 function CategoriesItem() {
@@ -17,6 +18,8 @@ function CategoriesItem() {
           return (
             <div className="product" key={item.id}>
               <img src={item.img} alt="product" />
+              <p className="product-description">{item.description}</p>
+              <p className="price">{item.price}€</p>
             </div>
           );
         })}
