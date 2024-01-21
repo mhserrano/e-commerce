@@ -1,3 +1,5 @@
+/* categories header */
+
 .title {
   display: flex;
   align-items: center;
@@ -31,4 +33,48 @@
 
 .categories-btns button:hover {
   border: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+/* category */
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.product {
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.product-description,
+.price {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+.product-description {
+  padding-top: 10px;
+}
+
+.price {
+  font-size: 22px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+.products-container img {
+  width: 275px;
+  height: 275px;
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
 }

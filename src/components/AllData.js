@@ -61,7 +61,7 @@ export const items = [
     category: "bed",
     img: Bed5,
     price: 370,
-    description: "Minimalist and Cozy White Bed",
+    description: "Minimalist White Bed",
   },
   {
     id: 6,
@@ -222,6 +222,6 @@ export const items = [
     category: "sofa",
     img: Sofa7,
     price: 289,
-    description: "Elegant Dark Blue Sofa.",
+    description: "Elegant Dark Blue Sofa",
   },
 ];
