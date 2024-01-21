@@ -53,7 +53,11 @@
 .product {
   margin: 0 auto;
   padding: 15px;
-  border: 1px solid black;
+  border: 2px solid rgb(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+}
+.product:hover {
+  border: 2px solid rgb(0, 0, 0, 0.7);
 }
 
 .product-description,
