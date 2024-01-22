@@ -1,4 +1,3 @@
-import "../Categories.css";
 import { items } from "../AllData";
 
 function Beds() {

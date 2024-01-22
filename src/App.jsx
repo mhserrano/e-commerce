@@ -4,11 +4,12 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import All from "./components/SingleCategory/All";
-import Sofas from "./components/SingleCategory/Sofas";
+import SofasCategory from "./components/SingleCategory/SofasCategory";
 import BedsCategory from "./components/SingleCategory/BedsCategory";
-import Lighting from "./components/SingleCategory/Lighting";
-import Plants from "./components/SingleCategory/Plants";
-import Chairs from "./components/SingleCategory/Chairs";
+import LightingCategory from "./components/SingleCategory/LightingCategory";
+import PlantsCategory from "./components/SingleCategory/PlantsCategory";
+import ChairsCategory from "./components/SingleCategory/ChairsCategory";
+
 import FavoritePage from "./pages/FavoritePage";
 
 function App() {
@@ -19,11 +20,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
-          <Route path="sofas" element={<Sofas />} />
+          <Route path="sofas" element={<SofasCategory />} />
           <Route path="beds" element={<BedsCategory />} />
-          <Route path="lighting" element={<Lighting />} />
-          <Route path="plants" element={<Plants />} />
-          <Route path="chairs" element={<Chairs />} />
+          <Route path="lighting" element={<LightingCategory />} />
+          <Route path="plants" element={<PlantsCategory />} />
+          <Route path="chairs" element={<ChairsCategory />} />
         </Route>
         <Route path="favorite-page" element={<FavoritePage />} />
       </Routes>
