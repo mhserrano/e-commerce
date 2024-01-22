@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import All from "./components/SingleCategory/All";
 import Sofas from "./components/SingleCategory/Sofas";
-import Beds from "./components/SingleCategory/Beds";
+import BedsCategory from "./components/SingleCategory/BedsCategory";
 import Lighting from "./components/SingleCategory/Lighting";
 import Plants from "./components/SingleCategory/Plants";
 import Chairs from "./components/SingleCategory/Chairs";
@@ -20,7 +20,7 @@ function App() {
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="sofas" element={<Sofas />} />
-          <Route path="beds" element={<Beds />} />
+          <Route path="beds" element={<BedsCategory />} />
           <Route path="lighting" element={<Lighting />} />
           <Route path="plants" element={<Plants />} />
           <Route path="chairs" element={<Chairs />} />
