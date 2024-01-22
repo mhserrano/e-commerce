@@ -1,5 +1,6 @@
 body {
   font-family: "Blinker", sans-serif;
+  scroll-behavior: smooth;
 }
 a {
   color: black;
