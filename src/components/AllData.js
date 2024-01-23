@@ -34,6 +34,7 @@ export const items = [
     img: Bed1,
     price: 349,
     description: "wood bedframe bed",
+    proud: true,
   },
   {
     id: 2,
@@ -41,6 +42,7 @@ export const items = [
     img: Bed2,
     price: 299,
     description: "Sophisticated Plush Suede Bed",
+    proud: true,
   },
   {
     id: 3,
@@ -69,6 +71,7 @@ export const items = [
     img: Chair1,
     price: 270,
     description: "Mid-Century Grey Linen Armchair",
+    proud: true,
   },
   {
     id: 7,
@@ -83,6 +86,7 @@ export const items = [
     img: Chair3,
     price: 130,
     description: "Modern French Design Chair",
+    proud: true,
   },
   {
     id: 9,
@@ -104,6 +108,7 @@ export const items = [
     img: Lamp1,
     price: 40,
     description: "Modern Floor Lamp",
+    proud: true,
   },
   {
     id: 12,
@@ -153,6 +158,7 @@ export const items = [
     img: Plant2,
     price: 39,
     description: "Floor plant in a bamboo pot",
+    proud: true,
   },
   {
     id: 19,
@@ -160,6 +166,7 @@ export const items = [
     img: Plant3,
     price: 20,
     description: "wooden hanging plants",
+    proud: true,
   },
   {
     id: 20,
@@ -195,6 +202,7 @@ export const items = [
     img: Sofa3,
     price: 320,
     description: "Minimalist Light Brown Sofa",
+    proud: true,
   },
   {
     id: 25,
