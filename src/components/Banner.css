@@ -39,3 +39,20 @@
   width: 100%;
   height: 100%;
 }
+.banner-container button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  border: 2px solid #000;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.banner-container button:hover {
+  color: #000;
+  background-color: #e9e9e9;
+}
