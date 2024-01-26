@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import ProudProducts from "../components/ProudProducts";
 import Banner from "../components/Banner";
+import TrendingSlider from "../components/TrendingSlider";
 import BannerReverse from "../components/BannerReverse";
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       <Hero />
       <ProudProducts />
       <Banner />
+      <TrendingSlider />
       <BannerReverse />
     </>
   );
