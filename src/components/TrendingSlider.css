@@ -1,0 +1,27 @@
+.title-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-btns h3 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.btns {
+  display: flex;
+  gap: 4px;
+}
+.btns button {
+  flex-direction: row;
+  cursor: pointer;
+  padding: 4px 6px;
+  background-color: #373737;
+  color: #fff;
+  border: none;
+  transition: all 150ms ease-in-out;
+}
+
+.btns button:hover {
+  background-color: black;
+}

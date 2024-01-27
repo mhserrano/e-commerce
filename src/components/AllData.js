@@ -57,6 +57,7 @@ export const items = [
     img: Bed4,
     price: 490,
     description: "Gray Plush Bed",
+    trending: true,
   },
   {
     id: 5,
@@ -64,6 +65,7 @@ export const items = [
     img: Bed5,
     price: 370,
     description: "Minimalist White Bed",
+    trending: true,
   },
   {
     id: 6,
@@ -87,6 +89,7 @@ export const items = [
     price: 130,
     description: "Modern French Design Chair",
     proud: true,
+    trending: true,
   },
   {
     id: 9,
@@ -123,6 +126,7 @@ export const items = [
     img: Lamp3,
     price: 37,
     description: "Modern pendant glass lamp",
+    trending: true,
   },
   {
     id: 14,
@@ -181,6 +185,7 @@ export const items = [
     img: Plant5,
     price: 15,
     description: "Australian Houseplants",
+    trending: true,
   },
   {
     id: 22,
@@ -195,6 +200,7 @@ export const items = [
     img: Sofa2,
     price: 199,
     description: "Ligh Leather Sofa",
+    trending: true,
   },
   {
     id: 24,
@@ -210,6 +216,7 @@ export const items = [
     img: Sofa4,
     price: 240,
     description: "Orange Plush Sofa",
+    trending: true,
   },
   {
     id: 26,
