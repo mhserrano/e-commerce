@@ -74,6 +74,7 @@ export const items = [
     price: 270,
     description: "Mid-Century Grey Linen Armchair",
     proud: true,
+    trending: true,
   },
   {
     id: 7,
@@ -97,6 +98,7 @@ export const items = [
     img: Chair4,
     price: 199,
     description: "Modern French Design Chair",
+    trending: true,
   },
   {
     id: 10,
@@ -112,6 +114,7 @@ export const items = [
     price: 40,
     description: "Modern Floor Lamp",
     proud: true,
+    trending: true,
   },
   {
     id: 12,
