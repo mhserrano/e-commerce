@@ -1,16 +1,22 @@
-import "./TrendingSlider.css";
-
 import { items } from "./AllData";
 
 function TrendingItem() {
   const trendingItem = items.filter((item) => item.trending === true);
 
   return (
-    <div className="item-container">
+    <>
       {trendingItem.map((item) => {
-        return <h3 key={item.id}>{item.category}</h3>;
+        return (
+          <div className="product" key={item.id}>
+            <img src={item.img} alt="product" />
+            <div className="product-details">
+              <p className="product-description">{item.description}</p>
+              <p className="price">{item.price}€</p>
+            </div>
+          </div>
+        );
       })}
-    </div>
+    </>
   );
 }
 

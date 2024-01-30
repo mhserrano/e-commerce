@@ -1,25 +1,23 @@
 import "./TrendingSlider.css";
-
+import "./Categories.css";
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
-import TrendingIcon from "./TrendingItem";
+import TrendingItem from "./TrendingItem";
 function TrendingSlider() {
   return (
     <div className="trending-container">
-      <div className="container">
-        <div className="title-btns">
-          <h3>trending now</h3>
-          <div className="btns">
-            <button>
-              <IconArrowNarrowLeft />
-            </button>
-            <button>
-              <IconArrowNarrowRight />
-            </button>
-          </div>
+      <div className="title-btns">
+        <h2>Trending Now</h2>
+        <div className="btns">
+          <button>
+            <IconArrowNarrowLeft />
+          </button>
+          <button>
+            <IconArrowNarrowRight />
+          </button>
         </div>
-        <div className="trending-row">
-          <TrendingIcon />
-        </div>
+      </div>
+      <div className="trending-row">
+        <TrendingItem />
       </div>
     </div>
   );

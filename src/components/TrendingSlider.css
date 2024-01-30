@@ -1,11 +1,33 @@
+.trending-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.trending-row {
+  display: flex;
+  gap: 6px;
+  max-height: 320px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overscroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.trending-row img {
+  min-width: 190px;
+  height: 190px;
+  width: 100%;
+  max-height: auto;
+  object-fit: cover;
+}
+
 .title-btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
 }
-.title-btns h3 {
-  margin: 0;
-  text-transform: capitalize;
+.title-btns h2 {
+  margin: 50px 0 40px;
+  font-size: 26px;
 }
 
 .btns {
