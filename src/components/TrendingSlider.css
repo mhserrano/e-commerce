@@ -4,11 +4,10 @@
 }
 .trending-row {
   display: flex;
-  gap: 6px;
+  gap: 35px;
   max-height: 320px;
-  overflow-x: scroll;
   white-space: nowrap;
-  overscroll-behavior: smooth;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 .trending-row img {
