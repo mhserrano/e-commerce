@@ -3,7 +3,7 @@ import ProudProducts from "../components/ProudProducts";
 import Banner from "../components/Banner";
 import TrendingSlider from "../components/TrendingSlider";
 import BannerReverse from "../components/BannerReverse";
-
+import Footer from "../components/Footer";
 function Home() {
   return (
     <>
@@ -12,6 +12,7 @@ function Home() {
       <Banner />
       <TrendingSlider />
       <BannerReverse />
+      <Footer />
     </>
   );
 }
