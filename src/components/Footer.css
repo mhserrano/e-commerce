@@ -1,0 +1,30 @@
+footer {
+  background-color: #000;
+  padding: 20px 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+.footer-links a {
+  font-size: 18px;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.by {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 30px 0;
+}
+.by a {
+  color: #fff;
+}
