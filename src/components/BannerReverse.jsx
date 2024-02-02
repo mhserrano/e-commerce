@@ -1,6 +1,5 @@
 import "./Banner.css";
 import { Link } from "react-router-dom";
-import banner2 from "../img/banners/banner2.jpg";
 
 function BannerReverse({ title, text, img }) {
   return (

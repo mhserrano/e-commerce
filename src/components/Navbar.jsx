@@ -10,7 +10,12 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
+          >
             <img src={Logo} alt="Store Logo" className="logo-img" />
           </Link>
           <div className="nav-links">
