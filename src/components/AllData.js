@@ -9,7 +9,7 @@ import Bed3 from "../img/products/beds/bed3/bed3.jpg";
 import smallBed3A from "../img/products/beds/bed3/smallBed3A.jpg";
 
 import Bed4 from "../img/products/beds/bed4/bed4.jpg";
-import smallBed4A from "../img/products/beds/bed4smallBed4A.jpg";
+import smallBed4A from "../img/products/beds/bed4/smallBed4A.jpg";
 
 import Bed5 from "../img/products/beds/bed5/bed5.jpg";
 import smallBed5A from "../img/products/beds/bed5/smallBed5A.jpg";
@@ -63,18 +63,18 @@ import smallPlant1A from "../img/products/plants/plant1/smallPlant1A.jpg";
 import smallPlant1B from "../img/products/plants/plant1/smallPlant1B.jpg";
 
 import Plant2 from "../img/products/plants/plant2/plant2.jpg";
-import smallPlant2A from "../img/products/plants/plant1/smallPlant2A.jpg";
-import smallPlant2B from "../img/products/plants/plant1/smallPlant2B.jpg";
+import smallPlant2A from "../img/products/plants/plant2/smallPlant2A.jpg";
+import smallPlant2B from "../img/products/plants/plant2/smallPlant2B.jpg";
 
 import Plant3 from "../img/products/plants/plant3/plant3.jpg";
-import smallPlant3A from "../img/products/plants/plant1/smallPlant3A.jpg";
+import smallPlant3A from "../img/products/plants/plant3/smallPlant3A.jpg";
 
 import Plant4 from "../img/products/plants/plant4/plant4.jpg";
-import smallPlant4A from "../img/products/plants/plant1/smallPlant4A.jpg";
-import smallPlant4B from "../img/products/plants/plant1/smallPlant4B.jpg";
+import smallPlant4A from "../img/products/plants/plant4/smallPlant4A.jpg";
+import smallPlant4B from "../img/products/plants/plant4/smallPlant4B.jpg";
 
 import Plant5 from "../img/products/plants/plant5/plant5.jpg";
-import smallPlant5A from "../img/products/plants/plant1/smallPlant5A.jpg";
+import smallPlant5A from "../img/products/plants/plant5/smallPlant5A.jpg";
 
 import Sofa1 from "../img/products/sofas/sofa1/sofa1.jpg";
 import smallSofa1A from "../img/products/sofas/sofa1/smallSofa1A.jpg";
