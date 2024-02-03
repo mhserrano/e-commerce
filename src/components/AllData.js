@@ -107,6 +107,7 @@ export const items = [
     price: 349,
     description: "wood bedframe bed",
     proud: true,
+    otherImgs: smallBed1A,
   },
   {
     id: 2,
@@ -115,6 +116,7 @@ export const items = [
     price: 299,
     description: "Sophisticated Plush Suede Bed",
     proud: true,
+    otherImgs: [smallBed2A, smallBed2B],
   },
   {
     id: 3,
@@ -122,6 +124,7 @@ export const items = [
     img: Bed3,
     price: 329,
     description: "light tone panel bed",
+    otherImgs: smallBed3A,
   },
   {
     id: 4,
@@ -130,6 +133,7 @@ export const items = [
     price: 490,
     description: "Gray Plush Bed",
     trending: true,
+    otherImgs: smallBed4A,
   },
   {
     id: 5,
@@ -138,6 +142,7 @@ export const items = [
     price: 370,
     description: "Minimalist White Bed",
     trending: true,
+    otherImgs: [smallBed5A, smallBed5B],
   },
   {
     id: 6,
@@ -147,6 +152,7 @@ export const items = [
     description: "Mid-Century Grey Linen Armchair",
     proud: true,
     trending: true,
+    otherImgs: [smallChair1A, smallChair1B],
   },
   {
     id: 7,
@@ -154,6 +160,7 @@ export const items = [
     img: Chair2,
     price: 219,
     description: "Olive Velvet Chair",
+    otherImgs: [smallChair2A, smallChair2B],
   },
   {
     id: 8,
@@ -163,6 +170,7 @@ export const items = [
     description: "Modern French Design Chair",
     proud: true,
     trending: true,
+    otherImgs: [smallChair3A, smallChair3B],
   },
   {
     id: 9,
@@ -171,6 +179,7 @@ export const items = [
     price: 199,
     description: "Modern French Design Chair",
     trending: true,
+    otherImgs: [smallChair4A, smallChair4B],
   },
   {
     id: 10,
@@ -178,6 +187,7 @@ export const items = [
     img: Chair5,
     price: 189,
     description: "Oak Frame White Chair",
+    otherImgs: [smallChair5A, smallChair5B],
   },
   {
     id: 11,
@@ -187,6 +197,7 @@ export const items = [
     description: "Modern Floor Lamp",
     proud: true,
     trending: true,
+    otherImgs: [smallLamp1A, smallLamp1B],
   },
   {
     id: 12,
@@ -194,6 +205,7 @@ export const items = [
     img: Lamp2,
     price: 49,
     description: "pendant sand-colored lamps",
+    otherImgs: [smallLamp2A, smallLamp2B],
   },
   {
     id: 13,
@@ -202,6 +214,7 @@ export const items = [
     price: 37,
     description: "Modern pendant glass lamp",
     trending: true,
+    otherImgs: [smallLamp3A, smallLamp3B],
   },
   {
     id: 14,
@@ -209,6 +222,7 @@ export const items = [
     img: Lamp4,
     price: 70,
     description: "Minimalist White Lamp",
+    otherImgs: [smallLamp4A, smallLamp4B],
   },
   {
     id: 15,
@@ -216,6 +230,7 @@ export const items = [
     img: Lamp5,
     price: 80,
     description: "nordic design chandeliers",
+    otherImgs: [smallLamp5A, smallLamp5B],
   },
   {
     id: 16,
@@ -223,6 +238,7 @@ export const items = [
     img: Lamp6,
     price: 110,
     description: "modern pendant lamp",
+    otherImgs: [smallLamp6A, smallLamp6B],
   },
   {
     id: 17,
@@ -230,6 +246,7 @@ export const items = [
     img: Plant1,
     price: 30,
     description: "Floor plant in a bamboo pot",
+    otherImgs: [smallPlant1A, smallPlant1B],
   },
   {
     id: 18,
@@ -238,6 +255,7 @@ export const items = [
     price: 39,
     description: "Floor plant in a bamboo pot",
     proud: true,
+    otherImgs: [smallPlant2A, smallPlant2B],
   },
   {
     id: 19,
@@ -246,6 +264,7 @@ export const items = [
     price: 20,
     description: "wooden hanging plants",
     proud: true,
+    otherImgs: smallPlant3A,
   },
   {
     id: 20,
@@ -253,6 +272,7 @@ export const items = [
     img: Plant4,
     price: 15,
     description: "small indoor plants",
+    otherImgs: [smallPlant4A, smallPlant4B],
   },
   {
     id: 21,
@@ -261,6 +281,7 @@ export const items = [
     price: 15,
     description: "Australian Houseplants",
     trending: true,
+    otherImgs: smallPlant5A,
   },
   {
     id: 22,
@@ -268,6 +289,7 @@ export const items = [
     img: Sofa1,
     price: 220,
     description: "Dark Olive Green Sofa",
+    otherImgs: smallSofa1A,
   },
   {
     id: 23,
@@ -276,6 +298,7 @@ export const items = [
     price: 199,
     description: "Ligh Leather Sofa",
     trending: true,
+    otherImgs: smallSofa2A,
   },
   {
     id: 24,
@@ -284,6 +307,7 @@ export const items = [
     price: 320,
     description: "Minimalist Light Brown Sofa",
     proud: true,
+    otherImgs: [smallSofa3A, smallSofa3B],
   },
   {
     id: 25,
@@ -292,6 +316,7 @@ export const items = [
     price: 240,
     description: "Orange Plush Sofa",
     trending: true,
+    otherImgs: smallSofa4A,
   },
   {
     id: 26,
@@ -299,6 +324,7 @@ export const items = [
     img: Sofa5,
     price: 300,
     description: "Minimalist White Sofa",
+    otherImgs: [smallSofa5A, smallSofa5B],
   },
   {
     id: 27,
@@ -306,6 +332,7 @@ export const items = [
     img: Sofa6,
     price: 289,
     description: "Minimalist Light Brown Sofa",
+    otherImgs: smallSofa6A,
   },
   {
     id: 28,
@@ -313,5 +340,6 @@ export const items = [
     img: Sofa7,
     price: 289,
     description: "Elegant Dark Blue Sofa",
+    otherImgs: smallSofa7A,
   },
 ];
