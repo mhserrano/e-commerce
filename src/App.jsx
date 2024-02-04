@@ -10,6 +10,7 @@ import LightingCategory from "./components/SingleCategory/LightingCategory";
 import PlantsCategory from "./components/SingleCategory/PlantsCategory";
 import ChairsCategory from "./components/SingleCategory/ChairsCategory";
 
+import ProductPage from "./pages/ProductPage";
 import FavoritePage from "./pages/FavoritePage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="sofas" element={<SofasCategory />} />
@@ -26,6 +28,7 @@ function App() {
           <Route path="plants" element={<PlantsCategory />} />
           <Route path="chairs" element={<ChairsCategory />} />
         </Route>
+        <Route path="/categories/product" element={<ProductPage />} />
         <Route path="favorite-page" element={<FavoritePage />} />
       </Routes>
     </>

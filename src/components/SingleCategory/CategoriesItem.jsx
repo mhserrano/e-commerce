@@ -1,4 +1,5 @@
 import { items } from "../AllData";
+import { Link } from "react-router-dom";
 
 function CategoriesItem() {
   const shuffleItems = (array) => {
@@ -15,13 +16,15 @@ function CategoriesItem() {
       <div className="products-grid">
         {items.map((item) => {
           return (
-            <div className="product" key={item.id}>
-              <img src={item.img} alt="product" />
-              <div className="product-details">
-                <p className="product-description">{item.description}</p>
-                <p className="price">{item.price}€</p>
+            <Link to="/categories/product" key={item.id}>
+              <div className="product" key={item.id}>
+                <img src={item.img} alt="product" />
+                <div className="product-details">
+                  <p className="product-description">{item.description}</p>
+                  <p className="price">{item.price}€</p>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

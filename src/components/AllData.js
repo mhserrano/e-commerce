@@ -222,7 +222,7 @@ export const items = [
     img: Lamp4,
     price: 70,
     description: "Minimalist White Lamp",
-    otherImgs: [smallLamp4A, smallLamp4B],
+    otherImgs: smallLamp4A,
   },
   {
     id: 15,
