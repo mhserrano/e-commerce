@@ -2,8 +2,11 @@ import "./Categories.css";
 
 import { Link } from "react-router-dom";
 import { IconArrowLeft } from "@tabler/icons-react";
+import { useState } from "react";
 
 function CategoriesHeader() {
+  const [title, setTitle] = useState("all");
+
   return (
     <div className="container">
       <div className="title">
@@ -11,26 +14,26 @@ function CategoriesHeader() {
           <IconArrowLeft />
           Home
         </Link>
-        <h3>All</h3>
+        <h3>{title}</h3>
       </div>
       <div className="categories-btns">
         <Link to="all">
-          <button>All</button>
+          <button onClick={() => setTitle("all")}>All</button>
         </Link>
         <Link to="sofas">
-          <button>Sofas</button>
+          <button onClick={() => setTitle("sofas")}>Sofas</button>
         </Link>
         <Link to="beds">
-          <button>Beds</button>
+          <button onClick={() => setTitle("beds")}>Beds</button>
         </Link>
         <Link to="lighting">
-          <button>Lighting</button>
+          <button onClick={() => setTitle("lighting")}>Lighting</button>
         </Link>
         <Link to="plants">
-          <button>Plants</button>
+          <button onClick={() => setTitle("plants")}>Plants</button>
         </Link>
         <Link to="chairs">
-          <button>Chairs</button>
+          <button onClick={() => setTitle("chairs")}>Chairs</button>
         </Link>
       </div>
     </div>
