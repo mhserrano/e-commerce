@@ -1,11 +1,14 @@
 import "../components/ProductPage.css";
 
 import { items } from "../components/AllData";
+import TrendingSlider from "../components/TrendingSlider";
+import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
 
 function ProductPage() {
   return (
-    <div className="container">
-      <div className="product-page-container">
+    <div className="product-page-container">
+      <div className="container">
         <div className="product-display">
           <h3 className="product-title">Sophisticated Plush Suede Bed</h3>
           <div className="product-info">
@@ -36,7 +39,10 @@ function ProductPage() {
             </div>
           </div>
         </div>
+        <TrendingSlider />
       </div>
+      <Newsletter />
+      <Footer />
     </div>
   );
 }
