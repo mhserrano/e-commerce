@@ -1,17 +1,19 @@
 body {
   font-family: "Blinker", sans-serif;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
+
 a {
   color: black;
   text-decoration: none;
 }
 
 /* global */
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
