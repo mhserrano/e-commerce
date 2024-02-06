@@ -16,8 +16,8 @@ function CategoriesItem() {
       <div className="products-grid">
         {items.map((item) => {
           return (
-            <Link to="/categories/product" key={item.id}>
-              <div className="product" key={item.id}>
+            <Link to={`/categories/product/${item.id}`} key={item.id}>
+              <div className="product">
                 <img src={item.img} alt="product" />
                 <div className="product-details">
                   <p className="product-description">{item.description}</p>

@@ -3,7 +3,7 @@ import Sofas from "./Sofas";
 function SofasCategory() {
   return (
     <>
-      <Sofas />;
+      <Sofas />
     </>
   );
 }
