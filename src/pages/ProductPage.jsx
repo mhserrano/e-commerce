@@ -1,11 +1,15 @@
 import "../components/ProductPage.css";
-
+import { useParams } from "react-router-dom";
 import { items } from "../components/AllData";
 import TrendingSlider from "../components/TrendingSlider";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
 function ProductPage() {
+  const { id } = useParams();
+
+  const products = items.filter((item) => item.id === parseInt(id));
+  console.log(products[0].otherImgs);
   return (
     <div className="product-page-container">
       <div className="container">
@@ -13,13 +17,17 @@ function ProductPage() {
           <h3 className="product-title">Sophisticated Plush Suede Bed</h3>
           <div className="product-info">
             <div className="img-side">
-              <img src={items[4].img} alt="product" width={700} />
+              <img src={products[0].img} alt="product" width={700} />
             </div>
             <div className="details-side">
               <div className="small-imgs">
-                <img src={items[4].img} />
-                <img src={items[4].otherImgs[0]} />
-                <img src={items[4].otherImgs[1]} />
+                <img src={products[0].img} alt="product" />
+
+                {products[0].otherImgs.map((img, index) => {
+                  return <img src={img} alt="product" key={index} />;
+                })}
+
+                <img src={products[0].otherImgs} />
               </div>
               <div className="quantity-price">
                 <div className="quantity-row">
@@ -29,7 +37,7 @@ function ProductPage() {
                     <div className="quantity-counter">1</div>
                     <button>+</button>
                   </div>
-                  <p className="product-price">price €</p>
+                  <p className="product-price"></p>
                 </div>
               </div>
               <div className="shop-btns">

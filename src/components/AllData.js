@@ -107,7 +107,7 @@ export const items = [
     price: 349,
     description: "wood bedframe bed",
     proud: true,
-    otherImgs: smallBed1A,
+    otherImgs: [smallBed1A],
   },
   {
     id: 2,
@@ -124,7 +124,7 @@ export const items = [
     img: Bed3,
     price: 329,
     description: "light tone panel bed",
-    otherImgs: smallBed3A,
+    otherImgs: [smallBed3A],
   },
   {
     id: 4,
@@ -133,7 +133,7 @@ export const items = [
     price: 490,
     description: "Gray Plush Bed",
     trending: true,
-    otherImgs: smallBed4A,
+    otherImgs: [smallBed4A],
   },
   {
     id: 5,
@@ -222,7 +222,7 @@ export const items = [
     img: Lamp4,
     price: 70,
     description: "Minimalist White Lamp",
-    otherImgs: smallLamp4A,
+    otherImgs: [smallLamp4A],
   },
   {
     id: 15,
@@ -264,7 +264,7 @@ export const items = [
     price: 20,
     description: "wooden hanging plants",
     proud: true,
-    otherImgs: smallPlant3A,
+    otherImgs: [smallPlant3A],
   },
   {
     id: 20,
@@ -281,7 +281,7 @@ export const items = [
     price: 15,
     description: "Australian Houseplants",
     trending: true,
-    otherImgs: smallPlant5A,
+    otherImgs: [smallPlant5A],
   },
   {
     id: 22,
@@ -289,7 +289,7 @@ export const items = [
     img: Sofa1,
     price: 220,
     description: "Dark Olive Green Sofa",
-    otherImgs: smallSofa1A,
+    otherImgs: [smallSofa1A],
   },
   {
     id: 23,
@@ -298,7 +298,7 @@ export const items = [
     price: 199,
     description: "Ligh Leather Sofa",
     trending: true,
-    otherImgs: smallSofa2A,
+    otherImgs: [smallSofa2A],
   },
   {
     id: 24,
@@ -316,7 +316,7 @@ export const items = [
     price: 240,
     description: "Orange Plush Sofa",
     trending: true,
-    otherImgs: smallSofa4A,
+    otherImgs: [smallSofa4A],
   },
   {
     id: 26,
@@ -332,7 +332,7 @@ export const items = [
     img: Sofa6,
     price: 289,
     description: "Minimalist Light Brown Sofa",
-    otherImgs: smallSofa6A,
+    otherImgs: [smallSofa6A],
   },
   {
     id: 28,
@@ -340,6 +340,6 @@ export const items = [
     img: Sofa7,
     price: 289,
     description: "Elegant Dark Blue Sofa",
-    otherImgs: smallSofa7A,
+    otherImgs: [smallSofa7A],
   },
 ];
