@@ -22,12 +22,9 @@ function ProductPage() {
             <div className="details-side">
               <div className="small-imgs">
                 <img src={products[0].img} alt="product" />
-
                 {products[0].otherImgs.map((img, index) => {
                   return <img src={img} alt="product" key={index} />;
                 })}
-
-                <img src={products[0].otherImgs} />
               </div>
               <div className="quantity-price">
                 <div className="quantity-row">
