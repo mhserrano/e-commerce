@@ -1,5 +1,7 @@
 import "../components/Categories.css";
 
+import { Link } from "react-router-dom";
+
 import { items } from "./AllData";
 
 function ProudItem() {
@@ -11,13 +13,18 @@ function ProudItem() {
       <div className="products-grid">
         {proudItems.map((item) => {
           return (
-            <div className="product" key={item.id}>
-              <img src={item.img} alt="product" />
-              <div className="product-details">
-                <p className="product-description">{item.description}</p>
-                <p className="price">{item.price}€</p>
+            <Link
+              to={`/categories/product/${item.id}`}
+              onClick={() => window.top(0, 0)}
+            >
+              <div className="product" key={item.id}>
+                <img src={item.img} alt="product" />
+                <div className="product-details">
+                  <p className="product-description">{item.description}</p>
+                  <p className="price">{item.price}€</p>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
