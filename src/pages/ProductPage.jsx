@@ -21,7 +21,7 @@ function ProductPage() {
     <div className="product-page-container">
       <div className="container">
         <div className="product-display">
-          <h3 className="product-title">Sophisticated Plush Suede Bed</h3>
+          <h3 className="product-title">{products[0].description}</h3>
           <div className="product-info">
             <div className="img-side">
               <img src={image} alt="product" width={700} />
@@ -29,9 +29,9 @@ function ProductPage() {
             <div className="details-side">
               <div className="small-imgs">
                 <img
-                  src={image}
+                  src={products[0].img}
                   alt="product"
-                  onMouseOver={() => setImage(image)}
+                  onMouseOver={() => setImage(products[0].img)}
                 />
                 {products[0].otherImgs.map((img, index) => {
                   return (
@@ -52,7 +52,7 @@ function ProductPage() {
                     <div className="quantity-counter">1</div>
                     <button>+</button>
                   </div>
-                  <p className="product-price"></p>
+                  <p className="product-price">{products[0].price}€</p>
                 </div>
               </div>
               <div className="shop-btns">
