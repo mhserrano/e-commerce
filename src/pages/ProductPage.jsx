@@ -1,5 +1,6 @@
 import "../components/ProductPage.css";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { items } from "../components/AllData";
 import TrendingSlider from "../components/TrendingSlider";
 import Newsletter from "../components/Newsletter";
@@ -8,8 +9,14 @@ import Footer from "../components/Footer";
 function ProductPage() {
   const { id } = useParams();
 
-  const products = items.filter((item) => item.id === parseInt(id));
-  console.log(products[0].otherImgs);
+  const products = items.filter((item) => parseInt(id) === item.id);
+
+  const [image, setImage] = useState(products[0].img);
+
+  useEffect(() => {
+    setImage(products[0].img);
+  }, [id]);
+
   return (
     <div className="product-page-container">
       <div className="container">
@@ -17,13 +24,24 @@ function ProductPage() {
           <h3 className="product-title">Sophisticated Plush Suede Bed</h3>
           <div className="product-info">
             <div className="img-side">
-              <img src={products[0].img} alt="product" width={700} />
+              <img src={image} alt="product" width={700} />
             </div>
             <div className="details-side">
               <div className="small-imgs">
-                <img src={products[0].img} alt="product" />
+                <img
+                  src={image}
+                  alt="product"
+                  onMouseOver={() => setImage(image)}
+                />
                 {products[0].otherImgs.map((img, index) => {
-                  return <img src={img} alt="product" key={index} />;
+                  return (
+                    <img
+                      src={img}
+                      alt="product"
+                      onMouseOver={() => setImage(img)}
+                      key={index}
+                    />
+                  );
                 })}
               </div>
               <div className="quantity-price">
