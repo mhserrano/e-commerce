@@ -10,10 +10,11 @@ function TrendingItem() {
       {trendingItem.map((item) => {
         return (
           <Link
-            onClick={() => window.scrollTo(0, 0)}
             to={`/categories/product/${item.id}`}
+            onClick={() => window.scrollTo(0, 0)}
+            key={item.id}
           >
-            <div className="product" key={item.id}>
+            <div className="product">
               <img src={item.img} alt="product" />
               <div className="product-details">
                 <p className="product-description">{item.description}</p>
