@@ -102,7 +102,7 @@ import smallSofa7A from "../img/products/sofas/sofa7/smallSofa7A.jpg";
 export const items = [
   {
     id: 1,
-    category: "bed",
+    category: "beds",
     img: Bed1,
     price: 349,
     description: "wood bedframe bed",
@@ -111,7 +111,7 @@ export const items = [
   },
   {
     id: 2,
-    category: "bed",
+    category: "beds",
     img: Bed2,
     price: 299,
     description: "Sophisticated Plush Suede Bed",
@@ -120,7 +120,7 @@ export const items = [
   },
   {
     id: 3,
-    category: "bed",
+    category: "beds",
     img: Bed3,
     price: 329,
     description: "light tone panel bed",
@@ -128,7 +128,7 @@ export const items = [
   },
   {
     id: 4,
-    category: "bed",
+    category: "beds",
     img: Bed4,
     price: 490,
     description: "Gray Plush Bed",
@@ -137,7 +137,7 @@ export const items = [
   },
   {
     id: 5,
-    category: "bed",
+    category: "beds",
     img: Bed5,
     price: 370,
     description: "Minimalist White Bed",
@@ -146,7 +146,7 @@ export const items = [
   },
   {
     id: 6,
-    category: "chair",
+    category: "chairs",
     img: Chair1,
     price: 270,
     description: "Mid-Century Grey Linen Armchair",
@@ -156,7 +156,7 @@ export const items = [
   },
   {
     id: 7,
-    category: "chair",
+    category: "chairs",
     img: Chair2,
     price: 219,
     description: "Olive Velvet Chair",
@@ -164,7 +164,7 @@ export const items = [
   },
   {
     id: 8,
-    category: "chair",
+    category: "chairs",
     img: Chair3,
     price: 130,
     description: "Modern French Design Chair",
@@ -174,7 +174,7 @@ export const items = [
   },
   {
     id: 9,
-    category: "chair",
+    category: "chairs",
     img: Chair4,
     price: 199,
     description: "Modern French Design Chair",
@@ -183,7 +183,7 @@ export const items = [
   },
   {
     id: 10,
-    category: "chair",
+    category: "chairs",
     img: Chair5,
     price: 189,
     description: "Oak Frame White Chair",
@@ -285,7 +285,7 @@ export const items = [
   },
   {
     id: 22,
-    category: "sofa",
+    category: "sofas",
     img: Sofa1,
     price: 220,
     description: "Dark Olive Green Sofa",
@@ -293,7 +293,7 @@ export const items = [
   },
   {
     id: 23,
-    category: "sofa",
+    category: "sofas",
     img: Sofa2,
     price: 199,
     description: "Ligh Leather Sofa",
@@ -302,7 +302,7 @@ export const items = [
   },
   {
     id: 24,
-    category: "sofa",
+    category: "sofas",
     img: Sofa3,
     price: 320,
     description: "Minimalist Light Brown Sofa",
@@ -311,7 +311,7 @@ export const items = [
   },
   {
     id: 25,
-    category: "sofa",
+    category: "sofas",
     img: Sofa4,
     price: 240,
     description: "Orange Plush Sofa",
@@ -320,7 +320,7 @@ export const items = [
   },
   {
     id: 26,
-    category: "sofa",
+    category: "sofas",
     img: Sofa5,
     price: 300,
     description: "Minimalist White Sofa",
@@ -328,7 +328,7 @@ export const items = [
   },
   {
     id: 27,
-    category: "sofa",
+    category: "sofas",
     img: Sofa6,
     price: 289,
     description: "Minimalist Light Brown Sofa",
@@ -336,7 +336,7 @@ export const items = [
   },
   {
     id: 28,
-    category: "sofa",
+    category: "sofas",
     img: Sofa7,
     price: 289,
     description: "Elegant Dark Blue Sofa",

@@ -2,7 +2,7 @@ import { items } from "../AllData";
 import { Link } from "react-router-dom";
 
 function Beds() {
-  const filteredItems = items.filter((item) => item.category === "bed");
+  const filteredItems = items.filter((item) => item.category === "beds");
 
   return (
     <div className="products-container">
