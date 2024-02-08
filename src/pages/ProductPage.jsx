@@ -16,10 +16,21 @@ function ProductPage() {
   const products = items.filter((item) => parseInt(id) === item.id);
 
   const [image, setImage] = useState(products[0].img);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     setImage(products[0].img);
   }, [id]);
+
+  function reduceQuantity() {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  }
+
+  function increaseQuantity() {
+    setQuantity(quantity + 1);
+  }
 
   return (
     <div className="product-page-container">
@@ -56,9 +67,9 @@ function ProductPage() {
                 <div className="quantity-row">
                   <p>quantity</p>
                   <div className="product-btns">
-                    <button>-</button>
-                    <div className="quantity-counter">1</div>
-                    <button>+</button>
+                    <button onClick={reduceQuantity}>-</button>
+                    <div className="quantity-counter">{quantity}</div>
+                    <button onClick={increaseQuantity}>+</button>
                   </div>
                   <p className="product-price">{products[0].price}€</p>
                 </div>

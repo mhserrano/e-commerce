@@ -19,11 +19,21 @@ function Footer() {
       <div className="by">
         <p>
           This project was coded by
-          <a href="https://github.com/mhserrano"> Maria Serrano</a> and is
-          <a href="https://github.com/mhserrano/e-commerce"> open-sourced.</a>
+          <a href="https://github.com/mhserrano" target="_blank">
+            {" "}
+            Maria Serrano
+          </a>{" "}
+          and is
+          <a href="https://github.com/mhserrano/e-commerce" target="_blank">
+            {" "}
+            open-sourced.
+          </a>
           <br />
           Design inspired by
-          <a href="https://github.com/Abderraouf-Rahmani"> Abderraouf</a>
+          <a href="https://github.com/Abderraouf-Rahmani" target="_blank">
+            {" "}
+            Abderraouf
+          </a>
         </p>
       </div>
     </footer>
