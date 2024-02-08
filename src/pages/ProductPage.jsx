@@ -17,6 +17,7 @@ function ProductPage() {
 
   const [image, setImage] = useState(products[0].img);
   const [quantity, setQuantity] = useState(1);
+  const [price, setPrice] = useState(products[0].price);
 
   useEffect(() => {
     setImage(products[0].img);
@@ -25,11 +26,13 @@ function ProductPage() {
   function reduceQuantity() {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+      setPrice(price - products[0].price);
     }
   }
 
   function increaseQuantity() {
     setQuantity(quantity + 1);
+    setPrice(price + products[0].price);
   }
 
   return (
@@ -71,7 +74,7 @@ function ProductPage() {
                     <div className="quantity-counter">{quantity}</div>
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <p className="product-price">{products[0].price}€</p>
+                  <p className="product-price">{price}€</p>
                 </div>
               </div>
               <div className="shop-btns">
