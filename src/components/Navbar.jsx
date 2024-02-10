@@ -12,6 +12,17 @@ import {
 
 function Navbar() {
   const [fullMenu, setFullMenu] = useState(false);
+  const [smoothNav, setSmoothNav] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      setSmoothNav(true);
+    } else {
+      setSmoothNav(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <>
@@ -28,7 +39,9 @@ function Navbar() {
             <Link to="/categories/product/8">product page</Link>
           </div>
         </div>
-        <div className="nav-container">
+        <div
+          className={`nav-container ${smoothNav ? `smooth-nav-behavior` : ""}`}
+        >
           <Link
             to="/"
             onClick={() => {
