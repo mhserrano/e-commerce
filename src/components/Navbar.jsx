@@ -34,9 +34,18 @@ function Navbar() {
           />
 
           <div className="mobile-links">
-            <Link to="categories/all">categories</Link>
-            <Link to="favorite-page">favorites</Link>
-            <Link to="/categories/product/8">product page</Link>
+            <Link to="categories/all" onClick={() => setFullMenu(!fullMenu)}>
+              categories
+            </Link>
+            <Link to="favorite-page" onClick={() => setFullMenu(!fullMenu)}>
+              favorites
+            </Link>
+            <Link
+              to="/categories/product/8"
+              onClick={() => setFullMenu(!fullMenu)}
+            >
+              product page
+            </Link>
           </div>
         </div>
         <div
