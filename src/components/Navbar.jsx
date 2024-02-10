@@ -1,14 +1,33 @@
 import "./Navbar.css";
 
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 import Logo from "../img/logo.svg";
-import { IconShoppingCart } from "@tabler/icons-react";
+import {
+  IconShoppingCart,
+  IconHeart,
+  IconMenu2,
+  IconX,
+} from "@tabler/icons-react";
 
 function Navbar() {
+  const [fullMenu, setFullMenu] = useState(false);
+
   return (
     <>
       <nav className="navbar">
+        <div className={`mobile-nav-open ${fullMenu ? `menu-on` : `menu-off`}`}>
+          <IconX
+            className="exit-mobile-menu"
+            onClick={() => setFullMenu(!fullMenu)}
+          />
+
+          <div className="mobile-links">
+            <Link to="categories/all">categories</Link>
+            <Link to="favorite-page">favorites</Link>
+            <Link to="/categories/product/8">product page</Link>
+          </div>
+        </div>
         <div className="nav-container">
           <Link
             to="/"
@@ -20,8 +39,18 @@ function Navbar() {
           </Link>
           <div className="nav-links">
             <Link to="categories/all">categories</Link>
-            <Link to="favorite-page">favorite</Link>
+            <Link to="favorite-page">
+              <IconHeart />
+            </Link>
             <IconShoppingCart />
+          </div>
+          <div className="hamburger-menu">
+            <IconShoppingCart />
+            <IconMenu2
+              onClick={() => {
+                setFullMenu(true);
+              }}
+            />
           </div>
         </div>
       </nav>
