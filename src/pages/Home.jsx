@@ -9,7 +9,7 @@ import banner1 from "../img/banners/banner1.jpg";
 import banner2 from "../img/banners/banner2.jpg";
 function Home() {
   return (
-    <>
+    <div className="container">
       <Hero />
       <ProudProducts />
       <Banner
@@ -25,7 +25,7 @@ function Home() {
       />
       <Newsletter />
       <Footer />
-    </>
+    </div>
   );
 }
 
