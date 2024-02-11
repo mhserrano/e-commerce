@@ -47,3 +47,32 @@
   font-size: 46px;
   font-weight: 700;
 }
+
+@media (max-width: 750px) {
+  .hero-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "one one" "two-left two-right" "three-left three-right";
+    grid-gap: 10px;
+  }
+
+  .grid-one {
+    grid-area: one;
+    overflow: hidden;
+  }
+  .grid-two-left {
+    grid-area: two-left;
+    overflow: hidden;
+  }
+  .grid-two-right {
+    grid-area: two-right;
+    overflow: hidden;
+  }
+  .grid-three-left {
+    grid-area: three-left;
+  }
+  .grid-three-right {
+    grid-area: three-right;
+  }
+}

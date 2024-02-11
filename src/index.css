@@ -19,3 +19,8 @@ a {
   margin: 0 auto;
   padding-top: 110px;
 }
+@media (max-width: 750px) {
+  .container {
+    padding: 110px 19px 0;
+  }
+}
