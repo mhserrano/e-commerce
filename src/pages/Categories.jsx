@@ -6,12 +6,14 @@ import Footer from "../components/Footer.jsx";
 
 function Categories() {
   return (
-    <>
-      <CategoriesHeader />
-      <Outlet />
+    <div className="categories-container">
+      <div className="container">
+        <CategoriesHeader />
+        <Outlet />
+      </div>
       <Newsletter />
       <Footer />
-    </>
+    </div>
   );
 }
 

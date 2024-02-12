@@ -8,7 +8,7 @@ function CategoriesHeader() {
   const [title, setTitle] = useState("all");
 
   return (
-    <div className="container">
+    <>
       <div className="title">
         <Link to="/">
           <IconArrowLeft />
@@ -36,7 +36,7 @@ function CategoriesHeader() {
           <button onClick={() => setTitle("chairs")}>Chairs</button>
         </Link>
       </div>
-    </div>
+    </>
   );
 }
 

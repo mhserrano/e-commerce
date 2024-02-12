@@ -9,23 +9,25 @@ import banner1 from "../img/banners/banner1.jpg";
 import banner2 from "../img/banners/banner2.jpg";
 function Home() {
   return (
-    <div className="container">
-      <Hero />
-      <ProudProducts />
-      <Banner
-        title="Creative harmonious living"
-        text=" Our Products are all made to standard sizes so that you can mix and match them freely."
-        img={banner1}
-      />
-      <TrendingSlider />
-      <BannerReverse
-        title="Comfortable & Elegante Living"
-        text=" Our Products are all made to standard sizes so that you can mix and match them freely."
-        img={banner2}
-      />
+    <>
+      <div className="container">
+        <Hero />
+        <ProudProducts />
+        <Banner
+          title="Creative harmonious living"
+          text=" Our Products are all made to standard sizes so that you can mix and match them freely."
+          img={banner1}
+        />
+        <TrendingSlider />
+        <BannerReverse
+          title="Comfortable & Elegante Living"
+          text=" Our Products are all made to standard sizes so that you can mix and match them freely."
+          img={banner2}
+        />
+      </div>
       <Newsletter />
       <Footer />
-    </div>
+    </>
   );
 }
 
