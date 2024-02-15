@@ -5,21 +5,37 @@
 }
 
 .news-container h3 {
-  margin: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   text-align: center;
   font-size: 35px;
 }
 
 .news-container form {
-  margin-top: 20px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .news-container input,
 .news-container button {
+  outline: none;
+  cursor: pointer;
   font-size: 17px;
   border: none;
   padding: 7px;
-  margin-right: 7px;
+}
+
+@media (max-width: 500px) {
+  .news-container form {
+    gap: 5px;
+  }
+  .news-container input,
+  .news-container button {
+    margin: 0 40px;
+    text-align: center;
+    width: 100%;
+  }
 }
