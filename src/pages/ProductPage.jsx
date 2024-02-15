@@ -67,16 +67,15 @@ function ProductPage() {
                   );
                 })}
               </div>
-              <div className="quantity-price">
-                <div className="quantity-row">
-                  <p>quantity</p>
-                  <div className="product-btns">
-                    <button onClick={decreaseQuantity}>-</button>
-                    <div className="quantity-counter">{quantity}</div>
-                    <button onClick={increaseQuantity}>+</button>
-                  </div>
-                  <p className="product-price">{price}€</p>
+
+              <div className="quantity-row">
+                <p>quantity</p>
+                <div className="product-btns">
+                  <button onClick={decreaseQuantity}>-</button>
+                  <div className="quantity-counter">{quantity}</div>
+                  <button onClick={increaseQuantity}>+</button>
                 </div>
+                <p className="product-price">{price}.00€</p>
               </div>
               <div className="shop-btns">
                 <button className="add-btn">add to cart</button>
