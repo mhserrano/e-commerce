@@ -13,6 +13,7 @@ import {
 function Navbar() {
   const [fullMenu, setFullMenu] = useState(false);
   const [smoothNav, setSmoothNav] = useState(false);
+  const [cart, setCart] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -26,6 +27,18 @@ function Navbar() {
 
   return (
     <>
+      <div className={`cart-background ${cart ? `bg-on` : `bg-off`}`}></div>
+      <div className={`cart ${cart ? `cart-on` : `cart-off`}`}>
+        <div className="cart-header">
+          <h3>Your Shopping Cart</h3>
+          <IconX
+            onClick={() => {
+              setCart(!cart);
+            }}
+          />
+        </div>
+        <div className="cart-body"></div>
+      </div>
       <nav className="navbar">
         <div className={`mobile-nav-open ${fullMenu ? `menu-on` : `menu-off`}`}>
           <IconX
@@ -64,10 +77,18 @@ function Navbar() {
             <Link to="favorite-page">
               <IconHeart />
             </Link>
-            <IconShoppingCart />
+            <IconShoppingCart
+              onClick={() => {
+                setCart(!cart);
+              }}
+            />
           </div>
           <div className="hamburger-menu">
-            <IconShoppingCart />
+            <IconShoppingCart
+              onClick={() => {
+                setCart(!cart);
+              }}
+            />
             <IconMenu2
               onClick={() => {
                 setFullMenu(true);
