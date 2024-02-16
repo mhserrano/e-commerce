@@ -9,7 +9,13 @@ function Sofas() {
       <div className="products-grid">
         {filteredItems.map((item) => {
           return (
-            <Link to={`/categories/product/${item.id}`} key={item.id}>
+            <Link
+              to={`/categories/product/${item.id}`}
+              key={item.id}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
               <div className="product">
                 <img src={item.img} alt="product" />
                 <div className="product-details">
