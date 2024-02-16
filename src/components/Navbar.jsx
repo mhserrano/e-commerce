@@ -2,13 +2,15 @@ import "./Navbar.css";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Logo from "../img/logo.svg";
+
 import {
   IconShoppingCart,
   IconHeart,
   IconMenu2,
   IconX,
 } from "@tabler/icons-react";
+import Logo from "../img/logo.svg";
+import EmptyCart from "./EmptyCart";
 
 function Navbar() {
   const [fullMenu, setFullMenu] = useState(false);
@@ -37,7 +39,9 @@ function Navbar() {
             }}
           />
         </div>
-        <div className="cart-body"></div>
+        <div className="cart-body">
+          <EmptyCart />
+        </div>
       </div>
       <nav className="navbar">
         <div className={`mobile-nav-open ${fullMenu ? `menu-on` : `menu-off`}`}>
