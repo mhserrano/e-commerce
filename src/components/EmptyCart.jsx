@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import "./Cart.css";
 import EmptyCartImg from "../img/cart/empty-cart.png";
 
-function EmptyCart() {
+function EmptyCart({ changeCartState }) {
   return (
     <div className="empty-cart">
       <img src={EmptyCartImg} alt="empty-cart" width={160} />
@@ -12,7 +13,7 @@ function EmptyCart() {
           window.scrollTo(0, 0);
         }}
       >
-        <button>Keep Browsing</button>
+        <button onClick={changeCartState}>Keep Browsing</button>
       </Link>
     </div>
   );

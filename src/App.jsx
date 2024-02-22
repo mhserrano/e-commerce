@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -12,6 +13,7 @@ import ChairsCategory from "./components/SingleCategory/ChairsCategory";
 
 import ProductPage from "./pages/ProductPage";
 import FavoritePage from "./pages/FavoritePage";
+import React from "react";
 
 function App() {
   return (
