@@ -1,5 +1,5 @@
 import "./Navbar.css";
-
+import "./Cart.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -10,12 +10,16 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import Logo from "../img/logo.svg";
+
 import EmptyCart from "./EmptyCart";
+import FullCart from "./FullCart";
 
 function Navbar() {
   const [fullMenu, setFullMenu] = useState(false);
   const [smoothNav, setSmoothNav] = useState(false);
   const [cart, setCart] = useState(false);
+
+  let number = 1;
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -27,22 +31,31 @@ function Navbar() {
 
   window.addEventListener("scroll", handleScroll);
 
+  function changeCartState() {
+    setCart(!cart);
+  }
+
   return (
     <>
       <div className={`cart-background ${cart ? `bg-on` : `bg-off`}`}></div>
+
       <div className={`cart ${cart ? `cart-on` : `cart-off`}`}>
         <div className="cart-header">
           <h3>Your Shopping Cart</h3>
-          <IconX
-            onClick={() => {
-              setCart(!cart);
-            }}
-          />
+          <IconX onClick={changeCartState} />
         </div>
+
         <div className="cart-body">
-          <EmptyCart />
+          {
+            (number = 1 ? (
+              <FullCart />
+            ) : (
+              <EmptyCart changeCartState={changeCartState} />
+            ))
+          }
         </div>
       </div>
+
       <nav className="navbar">
         <div className={`mobile-nav-open ${fullMenu ? `menu-on` : `menu-off`}`}>
           <IconX
@@ -65,6 +78,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
+
         <div
           className={`nav-container ${smoothNav ? `smooth-nav-behavior` : ""}`}
         >
@@ -81,18 +95,10 @@ function Navbar() {
             <Link to="favorite-page">
               <IconHeart />
             </Link>
-            <IconShoppingCart
-              onClick={() => {
-                setCart(!cart);
-              }}
-            />
+            <IconShoppingCart onClick={changeCartState} />
           </div>
           <div className="hamburger-menu">
-            <IconShoppingCart
-              onClick={() => {
-                setCart(!cart);
-              }}
-            />
+            <IconShoppingCart onClick={changeCartState} />
             <IconMenu2
               onClick={() => {
                 setFullMenu(true);
