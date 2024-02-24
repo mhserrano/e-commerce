@@ -3,49 +3,48 @@ import "../components/ProductPage.css";
 import { IconArrowLeft } from "@tabler/icons-react";
 
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 
 import { items } from "../components/AllData";
+
 import TrendingSlider from "../components/TrendingSlider";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
+export const CartContext = createContext();
+
 function ProductPage() {
   const { id } = useParams();
+  const product = items.filter((item) => parseInt(id) === item.id);
 
-  const products = items.filter((item) => parseInt(id) === item.id);
+  const {
+    addToCart,
+    quantity,
+    setQuantity,
+    decreaseQuantity,
+    increaseQuantity,
+  } = useContext(CartContext);
 
-  const [image, setImage] = useState(products[0].img);
-  const [quantity, setQuantity] = useState(1);
-
-  useEffect(() => {
-    setImage(products[0].img);
-    setQuantity(1);
-  }, [id]);
-
-  function decreaseQuantity() {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  }
-
-  function increaseQuantity() {
-    setQuantity(quantity + 1);
-  }
+  const [image, setImage] = useState(product[0].img);
 
   function calculatePrice(quantity) {
-    return quantity * products[0].price;
+    return quantity * product[0].price;
   }
+
+  useEffect(() => {
+    setImage(product[0].img);
+    setQuantity(1);
+  }, [id]);
 
   return (
     <div className="product-page-container">
       <div className="container">
         <div className="product-display">
-          <Link to={`/categories/${products[0].category}`}>
+          <Link to={`/categories/${product[0].category}`}>
             <IconArrowLeft />
             Back
           </Link>
-          <h3 className="product-title">{products[0].description}</h3>
+          <h3 className="product-title">{product[0].description}</h3>
           <div className="product-info">
             <div className="img-side">
               <img src={image} alt="product" width={700} />
@@ -53,11 +52,11 @@ function ProductPage() {
             <div className="details-side">
               <div className="small-imgs">
                 <img
-                  src={products[0].img}
+                  src={product[0].img}
                   alt="product"
-                  onMouseOver={() => setImage(products[0].img)}
+                  onMouseOver={() => setImage(product[0].img)}
                 />
-                {products[0].otherImgs.map((img, index) => {
+                {product[0].otherImgs.map((img, index) => {
                   return (
                     <img
                       src={img}
@@ -79,7 +78,9 @@ function ProductPage() {
                 <p className="product-price">{calculatePrice(quantity)}.00€</p>
               </div>
               <div className="shop-btns">
-                <button className="add-btn">add to cart</button>
+                <button className="add-btn" onClick={addToCart}>
+                  add to cart
+                </button>
                 <button className="buy-btn">buy now</button>
               </div>
             </div>
