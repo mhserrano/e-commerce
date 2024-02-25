@@ -17,6 +17,8 @@ function ProductPage() {
   const { id } = useParams();
   const product = items.filter((item) => parseInt(id) === item.id);
 
+  const [image, setImage] = useState(product[0].img);
+
   const {
     addToCart,
     quantity,
@@ -24,8 +26,6 @@ function ProductPage() {
     decreaseQuantity,
     increaseQuantity,
   } = useContext(CartContext);
-
-  const [image, setImage] = useState(product[0].img);
 
   function calculatePrice(quantity) {
     return quantity * product[0].price;
@@ -78,7 +78,12 @@ function ProductPage() {
                 <p className="product-price">{calculatePrice(quantity)}.00€</p>
               </div>
               <div className="shop-btns">
-                <button className="add-btn" onClick={addToCart}>
+                <button
+                  className="add-btn"
+                  onClick={() => {
+                    addToCart(product[0]);
+                  }}
+                >
                   add to cart
                 </button>
                 <button className="buy-btn">buy now</button>

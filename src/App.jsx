@@ -38,6 +38,8 @@ function App() {
       <CartContext.Provider
         value={{
           addToCart,
+          cartItem,
+          setCartItem,
           quantity,
           setQuantity,
           decreaseQuantity,

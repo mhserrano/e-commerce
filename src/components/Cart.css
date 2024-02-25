@@ -74,6 +74,7 @@ button {
   flex-direction: column;
   overflow-y: scroll;
   padding: 5px;
+  height: 500px;
 }
 
 /* cart item */
@@ -85,6 +86,7 @@ button {
   background-color: #f2f2f2;
   border: 1px solid #717171;
   justify-content: space-between;
+  margin: 10px 0;
 }
 
 .cart-item-info {
