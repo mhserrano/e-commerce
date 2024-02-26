@@ -5,11 +5,15 @@ import { IconTrash } from "@tabler/icons-react";
 import { CartContext } from "../pages/ProductPage";
 
 function CartItem() {
-  const { cartItem, quantity, decreaseQuantity, increaseQuantity } =
-    useContext(CartContext);
+  const {
+    cartItem,
+    cartItemQuantity,
+    decreaseCartItemQuantity,
+    increaseCartItemQuantity,
+  } = useContext(CartContext);
 
-  function calculatePrice(quantity) {
-    return quantity * cartItem[0].price;
+  function calculateCartItemPrice(cartItemQuantity, product) {
+    return cartItemQuantity * product;
   }
 
   return (
@@ -21,13 +25,13 @@ function CartItem() {
             <div className="cart-item-info">
               <p className="cart-item-name">{item.description}</p>
               <div className="cart-quantity-btns">
-                <button onClick={decreaseQuantity}>-</button>
-                <p className="quantity">{quantity}</p>
-                <button onClick={increaseQuantity}>+</button>
+                <button onClick={decreaseCartItemQuantity}>-</button>
+                <p className="quantity">{cartItemQuantity}</p>
+                <button onClick={increaseCartItemQuantity}>+</button>
               </div>
             </div>
             <div className="cart-item-price">
-              <p>{calculatePrice(quantity, item.price)}€</p>
+              <p>{calculateCartItemPrice(cartItemQuantity, item.price)}€</p>
               <IconTrash />
             </div>
           </div>

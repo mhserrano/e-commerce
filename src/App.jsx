@@ -18,7 +18,22 @@ import { CartContext } from "./pages/ProductPage";
 function App() {
   const [cartItem, setCartItem] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [cartItemQuantity, setCartItemQuantity] = useState(1);
 
+  function addToCart(product, qnt) {
+    setCartItem([...cartItem, product]);
+    checkItemQuantity(qnt);
+  }
+
+  const checkItemQuantity = (qnt) => {
+    if (qnt > 1) {
+      setCartItemQuantity(qnt);
+    }
+  };
+
+  {
+    /* Product Page */
+  }
   function decreaseQuantity() {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -29,8 +44,17 @@ function App() {
     setQuantity(quantity + 1);
   }
 
-  function addToCart(product) {
-    setCartItem([...cartItem, product]);
+  {
+    /* Cart Item */
+  }
+  function decreaseCartItemQuantity() {
+    if (cartItemQuantity > 1) {
+      setCartItemQuantity(cartItemQuantity - 1);
+    }
+  }
+
+  function increaseCartItemQuantity() {
+    setCartItemQuantity(cartItemQuantity + 1);
   }
 
   return (
@@ -38,12 +62,16 @@ function App() {
       <CartContext.Provider
         value={{
           addToCart,
+          checkItemQuantity,
           cartItem,
           setCartItem,
           quantity,
           setQuantity,
           decreaseQuantity,
           increaseQuantity,
+          cartItemQuantity,
+          decreaseCartItemQuantity,
+          increaseCartItemQuantity,
         }}
       >
         <Navbar />

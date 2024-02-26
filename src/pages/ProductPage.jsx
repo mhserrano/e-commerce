@@ -21,13 +21,14 @@ function ProductPage() {
 
   const {
     addToCart,
+    checkItemQuantity,
     quantity,
     setQuantity,
     decreaseQuantity,
     increaseQuantity,
   } = useContext(CartContext);
 
-  function calculatePrice(quantity) {
+  function calculateItemPrice(quantity) {
     return quantity * product[0].price;
   }
 
@@ -75,13 +76,15 @@ function ProductPage() {
                   <div className="quantity-counter">{quantity}</div>
                   <button onClick={increaseQuantity}>+</button>
                 </div>
-                <p className="product-price">{calculatePrice(quantity)}.00€</p>
+                <p className="product-price">
+                  {calculateItemPrice(quantity)}.00€
+                </p>
               </div>
               <div className="shop-btns">
                 <button
                   className="add-btn"
                   onClick={() => {
-                    addToCart(product[0]);
+                    addToCart(product[0], quantity);
                   }}
                 >
                   add to cart
