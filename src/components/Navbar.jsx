@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import "./Cart.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
   IconShoppingCart,
@@ -13,13 +13,14 @@ import Logo from "../img/logo.svg";
 
 import EmptyCart from "./EmptyCart";
 import FullCart from "./FullCart";
+import { CartContext } from "../pages/ProductPage";
 
 function Navbar() {
+  const { cartItem } = useContext(CartContext);
+
   const [fullMenu, setFullMenu] = useState(false);
   const [smoothNav, setSmoothNav] = useState(false);
   const [cart, setCart] = useState(false);
-
-  let number = 1;
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -46,13 +47,11 @@ function Navbar() {
         </div>
 
         <div className="cart-body">
-          {
-            (number = 1 ? (
-              <FullCart />
-            ) : (
-              <EmptyCart changeCartState={changeCartState} />
-            ))
-          }
+          {cartItem.length < 1 ? (
+            <EmptyCart changeCartState={changeCartState} />
+          ) : (
+            <FullCart />
+          )}
         </div>
       </div>
 
