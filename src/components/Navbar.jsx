@@ -16,7 +16,7 @@ import FullCart from "./FullCart";
 import { CartContext } from "../pages/ProductPage";
 
 function Navbar() {
-  const { cartItem } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   const [fullMenu, setFullMenu] = useState(false);
   const [smoothNav, setSmoothNav] = useState(false);
@@ -47,7 +47,7 @@ function Navbar() {
         </div>
 
         <div className="cart-body">
-          {cartItem.length < 1 ? (
+          {cartItems.length < 1 ? (
             <EmptyCart changeCartState={changeCartState} />
           ) : (
             <FullCart />

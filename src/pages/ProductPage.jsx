@@ -14,22 +14,23 @@ import Footer from "../components/Footer";
 export const CartContext = createContext();
 
 function ProductPage() {
+  const { addToCart } = useContext(CartContext);
   const { id } = useParams();
   const product = items.filter((item) => parseInt(id) === item.id);
-
+  const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(product[0].img);
-
-  const {
-    addToCart,
-    checkItemQuantity,
-    quantity,
-    setQuantity,
-    decreaseQuantity,
-    increaseQuantity,
-  } = useContext(CartContext);
 
   function calculateItemPrice(quantity) {
     return quantity * product[0].price;
+  }
+  function decreaseQuantity() {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  }
+
+  function increaseQuantity() {
+    setQuantity(quantity + 1);
   }
 
   useEffect(() => {
@@ -84,7 +85,7 @@ function ProductPage() {
                 <button
                   className="add-btn"
                   onClick={() => {
-                    addToCart(product[0], quantity);
+                    addToCart(product[0]);
                   }}
                 >
                   add to cart

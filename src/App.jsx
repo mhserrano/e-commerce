@@ -16,62 +16,47 @@ import FavoritePage from "./pages/FavoritePage";
 import { CartContext } from "./pages/ProductPage";
 
 function App() {
-  const [cartItem, setCartItem] = useState([]);
-  const [quantity, setQuantity] = useState(1);
-  const [cartItemQuantity, setCartItemQuantity] = useState(1);
+  const [cartItems, setCartItems] = useState([]);
 
-  function addToCart(product, qnt) {
-    setCartItem([...cartItem, product]);
-    checkItemQuantity(qnt);
-  }
+  const addToCart = (product) => {
+    const checkItemInCart = cartItems.find((item) => item.id === product.id);
 
-  const checkItemQuantity = (qnt) => {
-    if (qnt > 1) {
-      setCartItemQuantity(qnt);
+    if (checkItemInCart) {
+      const updatedCart = cartItems.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCartItems(updatedCart);
+    } else {
+      const newCartItem = { ...product, quantity: 1 };
+      setCartItems([...cartItems, newCartItem]);
     }
   };
 
-  {
-    /* Product Page */
-  }
-  function decreaseQuantity() {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  }
+  const increaseCartItemQnt = (productId) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCartItems(updatedCart);
+  };
 
-  function increaseQuantity() {
-    setQuantity(quantity + 1);
-  }
-
-  {
-    /* Cart Item */
-  }
-  function decreaseCartItemQuantity() {
-    if (cartItemQuantity > 1) {
-      setCartItemQuantity(cartItemQuantity - 1);
-    }
-  }
-
-  function increaseCartItemQuantity() {
-    setCartItemQuantity(cartItemQuantity + 1);
-  }
+  const decreaseCartItemQnt = (productId) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === productId && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
+    setCartItems(updatedCart);
+  };
 
   return (
     <>
       <CartContext.Provider
         value={{
           addToCart,
-          checkItemQuantity,
-          cartItem,
-          setCartItem,
-          quantity,
-          setQuantity,
-          decreaseQuantity,
-          increaseQuantity,
-          cartItemQuantity,
-          decreaseCartItemQuantity,
-          increaseCartItemQuantity,
+          cartItems,
+          setCartItems,
+          decreaseCartItemQnt,
+          increaseCartItemQnt,
         }}
       >
         <Navbar />
@@ -93,5 +78,4 @@ function App() {
     </>
   );
 }
-
 export default App;

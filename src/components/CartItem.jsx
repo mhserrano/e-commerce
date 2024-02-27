@@ -1,37 +1,33 @@
 import "./Cart.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { IconTrash } from "@tabler/icons-react";
 import { CartContext } from "../pages/ProductPage";
 
 function CartItem() {
-  const {
-    cartItem,
-    cartItemQuantity,
-    decreaseCartItemQuantity,
-    increaseCartItemQuantity,
-  } = useContext(CartContext);
+  const { cartItems, decreaseCartItemQnt, increaseCartItemQnt } =
+    useContext(CartContext);
 
-  function calculateCartItemPrice(cartItemQuantity, product) {
-    return cartItemQuantity * product;
+  function calculateCartItemPrice(cartItemQuantity, price) {
+    return cartItemQuantity * price;
   }
 
   return (
     <>
-      {cartItem.map((item, id) => {
+      {cartItems.map((item, id) => {
         return (
           <div className="cart-item" key={id}>
             <img src={item.img} width={120} />
             <div className="cart-item-info">
               <p className="cart-item-name">{item.description}</p>
               <div className="cart-quantity-btns">
-                <button onClick={decreaseCartItemQuantity}>-</button>
-                <p className="quantity">{cartItemQuantity}</p>
-                <button onClick={increaseCartItemQuantity}>+</button>
+                <button onClick={() => decreaseCartItemQnt(item.id)}>-</button>
+                <p className="quantity">{item.quantity}</p>
+                <button onClick={() => increaseCartItemQnt(item.id)}>+</button>
               </div>
             </div>
             <div className="cart-item-price">
-              <p>{calculateCartItemPrice(cartItemQuantity, item.price)}€</p>
+              <p>{calculateCartItemPrice(item.quantity, item.price)}€</p>
               <IconTrash />
             </div>
           </div>
