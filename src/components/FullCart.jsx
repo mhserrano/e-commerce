@@ -4,13 +4,23 @@ import { CartContext } from "../pages/ProductPage";
 import EmptyCart from "./EmptyCart";
 
 function FullCart() {
-  const { cartItems, cartItemQuantity } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <>
       <div className="full-cart">
-        {cartItems.length !== 0 ? <CartItem /> : <EmptyCart />}
-        <div className="checkout"></div>
+        <div className="items-list">
+          {cartItems.length !== 0 ? <CartItem /> : <EmptyCart />}
+        </div>
+        <div className="subtotal-container">
+          <div className="subtotal">
+            <p>Subtotal</p>
+            <p>120.00€</p>
+          </div>
+          <div className="checkout">
+            <button>Go to Checkout</button>
+          </div>
+        </div>
       </div>
     </>
   );
