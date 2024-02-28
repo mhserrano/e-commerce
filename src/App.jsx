@@ -22,16 +22,24 @@ function App() {
     const checkItemInCart = cartItems.find((item) => item.id === product.id);
 
     if (checkItemInCart) {
-      const updatedCart = cartItems.map((item) =>
+      const updatedCartItem = cartItems.map((item) =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
-      setCartItems(updatedCart);
+      setCartItems(updatedCartItem);
     } else {
       const newCartItem = { ...product, quantity: 1 };
       setCartItems([...cartItems, newCartItem]);
     }
   };
-
+  const deleteItemFromCart = (product) => {
+    const checkItemInCart = cartItems.find((item) => item.id === product.id);
+    if (checkItemInCart) {
+      const deletedCartItem = cartItems.filter(
+        (item) => item.id !== product.id
+      );
+      setCartItems(deletedCartItem);
+    }
+  };
   const increaseCartItemQnt = (productId) => {
     const updatedCart = cartItems.map((item) =>
       item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
@@ -57,6 +65,7 @@ function App() {
           setCartItems,
           decreaseCartItemQnt,
           increaseCartItemQnt,
+          deleteItemFromCart,
         }}
       >
         <Navbar />

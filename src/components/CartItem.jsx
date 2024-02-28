@@ -1,12 +1,16 @@
 import "./Cart.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { IconTrash } from "@tabler/icons-react";
 import { CartContext } from "../pages/ProductPage";
 
 function CartItem() {
-  const { cartItems, decreaseCartItemQnt, increaseCartItemQnt } =
-    useContext(CartContext);
+  const {
+    cartItems,
+    decreaseCartItemQnt,
+    increaseCartItemQnt,
+    deleteItemFromCart,
+  } = useContext(CartContext);
 
   function calculateCartItemPrice(cartItemQuantity, price) {
     return cartItemQuantity * price;
@@ -28,7 +32,7 @@ function CartItem() {
             </div>
             <div className="cart-item-price">
               <p>{calculateCartItemPrice(item.quantity, item.price)}€</p>
-              <IconTrash />
+              <IconTrash onClick={() => deleteItemFromCart(item)} />
             </div>
           </div>
         );
