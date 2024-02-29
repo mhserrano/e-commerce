@@ -12,10 +12,9 @@ function CartItem() {
     deleteItemFromCart,
   } = useContext(CartContext);
 
-  function calculateCartItemPrice(cartItemQuantity, price) {
+  const calculateCartItemPrice = (cartItemQuantity, price) => {
     return cartItemQuantity * price;
-  }
-
+  };
   return (
     <>
       {cartItems.map((item, id) => {
