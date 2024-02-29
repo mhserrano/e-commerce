@@ -143,6 +143,19 @@
   color: #b6002c;
 }
 
+/* left-side */
+.img-side {
+  padding: 60px 20px 10px;
+}
+.img-side img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* media queries */
 @media (max-width: 900px) {
   .product-page-container {
     padding: 120px 0 0;
@@ -155,19 +168,7 @@
     flex-direction: column;
   }
 
-  /* left-side */
-  .img-side {
-    padding: 60px 20px 10px;
-  }
-  .img-side img {
-    display: block;
-    margin: 0 auto;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-  }
-
-  /*right-side*/
+  /*right-side */
   .details-side {
     margin: 10px 0;
     padding: 20px;

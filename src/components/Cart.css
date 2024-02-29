@@ -25,7 +25,6 @@ button {
   z-index: 999;
   width: 500px;
   height: 100%;
-
   padding: 30px 25px 15px;
   transition: all 400ms ease-in-out;
 }
@@ -47,6 +46,7 @@ button {
 
 .cart-body {
   padding: 5px;
+  height: 95%;
 }
 
 /* empty cart */
@@ -79,15 +79,15 @@ button {
 }
 .items-list {
   overflow-y: scroll;
-  height: 52%;
+  height: 100%;
 }
 .subtotal-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  padding: 20px 5px;
+  margin: 20px 0 0;
+  padding: 10px 5px;
   border-top: 3px solid #000;
 }
 .subtotal p {
@@ -97,6 +97,7 @@ button {
 .checkout button {
   padding: 10px 35px;
   font-size: 20px;
+  font-weight: 600;
   background-color: #fff;
   color: #000;
   border: 2px solid #000;
@@ -156,4 +157,46 @@ button {
   background-color: #000;
   color: #fff;
   cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 1100px) {
+}
+@media (max-width: 900px) {
+}
+
+@media (max-width: 500px) {
+  .cart {
+    width: 300px;
+    padding: 15px 5px;
+  }
+  .cart-body {
+    padding: 0;
+  }
+  .full-cart {
+    margin: 5px 0;
+  }
+  .items-list {
+    overflow-x: hidden;
+  }
+  /* cart item */
+  .cart-item-info {
+    padding: 10px 5px;
+  }
+  .cart-item-name,
+  .cart-item-price {
+    font-size: 18px;
+  }
+
+  /* full cart */
+
+  .subtotal p {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .checkout button {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
 }
