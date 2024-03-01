@@ -72,6 +72,18 @@ function App() {
     }
   }, [cartItems.length]);
 
+  // local storage
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("product");
+    const parsedData = storedData ? JSON.parse(storedData) : null;
+    setCartItems(parsedData);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("product", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   return (
     <>
       <CartContext.Provider
