@@ -161,11 +161,6 @@ button {
 
 /* media queries */
 
-@media (max-width: 1100px) {
-}
-@media (max-width: 900px) {
-}
-
 @media (max-width: 500px) {
   .cart {
     width: 300px;
@@ -181,12 +176,17 @@ button {
     overflow-x: hidden;
   }
   /* cart item */
+
   .cart-item-info {
     padding: 10px 5px;
   }
   .cart-item-name,
   .cart-item-price {
     font-size: 18px;
+    line-height: 1;
+  }
+  .cart-item-price {
+    padding: 10px;
   }
 
   /* full cart */
@@ -196,7 +196,7 @@ button {
     font-weight: 600;
   }
   .checkout button {
-    padding: 10px 15px;
+    padding: 10px 5px;
     font-size: 18px;
   }
 }

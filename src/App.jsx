@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -14,6 +14,9 @@ import ChairsCategory from "./components/SingleCategory/ChairsCategory";
 import ProductPage from "./pages/ProductPage";
 import FavoritePage from "./pages/FavoritePage";
 import { CartContext } from "./pages/ProductPage";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -56,6 +59,19 @@ function App() {
     setCartItems(updatedCart);
   };
 
+  useEffect(() => {
+    const newItemNotification = (productName) =>
+      toast.success(`"${productName}" has been added to your cart 🎉`);
+    if (cartItems.length > 0) {
+      const lastItemAdded = cartItems[cartItems.length - 1];
+      const checkNewItem = cartItems.some(
+        (item) => item.id !== lastItemAdded.id
+      );
+
+      checkNewItem && newItemNotification(lastItemAdded.description);
+    }
+  }, [cartItems.length]);
+
   return (
     <>
       <CartContext.Provider
@@ -83,6 +99,19 @@ function App() {
           <Route path="/categories/product/:id" element={<ProductPage />} />
           <Route path="favorite-page" element={<FavoritePage />} />
         </Routes>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition:Bounce
+        />
       </CartContext.Provider>
     </>
   );

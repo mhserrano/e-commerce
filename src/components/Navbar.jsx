@@ -42,7 +42,10 @@ function Navbar() {
 
       <div className={`cart ${cart ? `cart-on` : `cart-off`}`}>
         <div className="cart-header">
-          <h3>Your Shopping Cart</h3>
+          <h3>
+            Your Shopping Cart <em>( {cartItems.length} )</em>
+          </h3>
+
           <IconX onClick={changeCartState} />
         </div>
 
