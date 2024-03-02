@@ -33,6 +33,7 @@ function App() {
       const newCartItem = { ...product, quantity: 1 };
       setCartItems([...cartItems, newCartItem]);
     }
+    toast.success(`"${product.description}" has been added to your cart 🎉`);
   };
   const deleteItemFromCart = (product) => {
     const checkItemInCart = cartItems.find((item) => item.id === product.id);
@@ -59,19 +60,6 @@ function App() {
     setCartItems(updatedCart);
   };
 
-  useEffect(() => {
-    const newItemNotification = (productName) =>
-      toast.success(`"${productName}" has been added to your cart 🎉`);
-    if (cartItems.length > 0) {
-      const lastItemAdded = cartItems[cartItems.length - 1];
-      const checkNewItem = cartItems.some(
-        (item) => item.id !== lastItemAdded.id
-      );
-
-      checkNewItem && newItemNotification(lastItemAdded.description);
-    }
-  }, [cartItems.length]);
-
   // local storage
 
   useEffect(() => {
@@ -83,7 +71,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("product", JSON.stringify(cartItems));
   }, [cartItems]);
-
   return (
     <>
       <CartContext.Provider
