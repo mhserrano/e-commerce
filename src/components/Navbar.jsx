@@ -3,12 +3,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 
-import {
-  IconShoppingCart,
-  IconHeart,
-  IconMenu2,
-  IconX,
-} from "@tabler/icons-react";
+import { IconShoppingCart, IconMenu2, IconX } from "@tabler/icons-react";
 import Logo from "../img/logo.svg";
 
 import EmptyCart from "./EmptyCart";
@@ -69,9 +64,7 @@ function Navbar() {
             <Link to="categories/all" onClick={() => setFullMenu(!fullMenu)}>
               categories
             </Link>
-            <Link to="favorite-page" onClick={() => setFullMenu(!fullMenu)}>
-              favorites
-            </Link>
+
             <Link
               to="/categories/product/8"
               onClick={() => setFullMenu(!fullMenu)}
@@ -94,13 +87,18 @@ function Navbar() {
           </Link>
           <div className="nav-links">
             <Link to="categories/all">categories</Link>
-            <Link to="favorite-page">
-              <IconHeart />
-            </Link>
-            <IconShoppingCart onClick={changeCartState} />
+            <div className="shopcart">
+              <IconShoppingCart onClick={changeCartState} />
+              <div className={cartItems.length !== 0 ? `badge` : `no-badge`}>
+                {cartItems.length}
+              </div>
+            </div>
           </div>
           <div className="hamburger-menu">
             <IconShoppingCart onClick={changeCartState} />
+            <div className={cartItems.length !== 0 ? `badge` : `no-badge`}>
+              {cartItems.length}
+            </div>
             <IconMenu2
               onClick={() => {
                 setFullMenu(true);
