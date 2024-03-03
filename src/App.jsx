@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [categoryTitle, setCategoryTitle] = useState("All");
 
   const addToCart = (product) => {
     const checkItemInCart = cartItems.find((item) => item.id === product.id);
@@ -80,6 +81,8 @@ function App() {
           decreaseCartItemQnt,
           increaseCartItemQnt,
           deleteItemFromCart,
+          categoryTitle,
+          setCategoryTitle,
         }}
       >
         <Navbar />

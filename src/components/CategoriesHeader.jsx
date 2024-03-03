@@ -1,11 +1,20 @@
 import "./Categories.css";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { CartContext } from "../pages/ProductPage";
+
 import { IconArrowLeft } from "@tabler/icons-react";
-import { useState } from "react";
 
 function CategoriesHeader() {
-  const [title, setTitle] = useState("all");
+  const { categoryTitle, setCategoryTitle } = useContext(CartContext);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentLocation = location.pathname.slice(1);
+    currentLocation === "categories/all" && setCategoryTitle("all");
+  }, [location.pathname, setCategoryTitle]);
 
   return (
     <>
@@ -14,26 +23,62 @@ function CategoriesHeader() {
           <IconArrowLeft />
           Home
         </Link>
-        <h3>{title}</h3>
+        <h3>{categoryTitle}</h3>
       </div>
       <div className="categories-btns">
         <Link to="all">
-          <button onClick={() => setTitle("all")}>All</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("all");
+            }}
+          >
+            All
+          </button>
         </Link>
         <Link to="sofas">
-          <button onClick={() => setTitle("sofas")}>Sofas</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("sofas");
+            }}
+          >
+            Sofas
+          </button>
         </Link>
         <Link to="beds">
-          <button onClick={() => setTitle("beds")}>Beds</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("beds");
+            }}
+          >
+            Beds
+          </button>
         </Link>
         <Link to="lighting">
-          <button onClick={() => setTitle("lighting")}>Lighting</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("lighting");
+            }}
+          >
+            Lighting
+          </button>
         </Link>
         <Link to="plants">
-          <button onClick={() => setTitle("plants")}>Plants</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("plants");
+            }}
+          >
+            Plants
+          </button>
         </Link>
         <Link to="chairs">
-          <button onClick={() => setTitle("chairs")}>Chairs</button>
+          <button
+            onClick={() => {
+              setCategoryTitle("chairs");
+            }}
+          >
+            Chairs
+          </button>
         </Link>
       </div>
     </>
