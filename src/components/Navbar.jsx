@@ -86,7 +86,14 @@ function Navbar() {
             <img src={Logo} alt="Store Logo" className="logo-img" />
           </Link>
           <div className="nav-links">
-            <Link to="categories/all">categories</Link>
+            <Link
+              to="categories/all"
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+            >
+              categories
+            </Link>
             <div className="shopcart">
               <IconShoppingCart onClick={changeCartState} />
               <div className={cartItems.length !== 0 ? `badge` : `no-badge`}>

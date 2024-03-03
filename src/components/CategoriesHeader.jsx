@@ -23,7 +23,7 @@ function CategoriesHeader() {
           <IconArrowLeft />
           Home
         </Link>
-        <h3>{categoryTitle}</h3>
+        <h1>{categoryTitle}</h1>
       </div>
       <div className="categories-btns">
         <Link to="all">
